@@ -1,0 +1,12 @@
+# [START gke_kubernetes_manifests_accounts_db_config_configmap_accounts_db_config]
+$patch: replace
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: accounts-db-config
+  labels:
+    app: accounts-db
+data:
+  # Updated to use CloudSQL Proxy
+  ACCOUNTS_DB_URI: postgresql://admin:admin@127.0.0.1:5432/accounts-db
+# [END gke_kubernetes_manifests_accounts_db_config_configmap_accounts_db_config]
