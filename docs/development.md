@@ -34,6 +34,7 @@ Find the [latest release of Maven 3.8](https://maven.apache.org/download.cgi) an
 ```
 wget https://dlcdn.apache.org/maven/maven-3/3.8.5/binaries/apache-maven-3.8.5-bin.tar.gz
 sudo tar xf apache-maven-*.tar.gz -C /opt
+sudo ln -s /opt/apache-maven-*/bin/mvn /usr/local/bin/
 ```
 
 Create a profile containing the paths of the newly extracted JDK and Maven directories:
